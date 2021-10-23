@@ -10,6 +10,15 @@
             title: post.user.name do %>
             <strong><%= post.user.name %></strong>
           <% end %>
+
+          <% if post.user_id == current_user.id %>
+          <%#ml-autoからms-autoへ変更(boostrap4→5の変更点)%>
+            <%= link_to post_path(post), method: :delete, class: "ms-auto mx-0 my-auto" do %>
+              <div class="delete-post-icon">
+              </div>
+            <% end %>
+          <% end %>
+
         </div>
 
         <%= link_to(post_path(post)) do %>
