@@ -1,19 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
     <%= link_to "", root_path, class: "navbar__brand navbar__mainLogo" %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
       <span class="navbar-toggler-icon"></span>
+
     </button>
-    <div class="collapse  navbar-collapse" id="navbarSupportedContent">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <%#ml-md-auto → ms-auto boostrap4→5への変更点%>
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li>
+      <%#<ul class="navbar-nav ms-auto align-items-center">%>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
           <%= link_to "投稿", new_post_path, class: "btn btn-primary" %>
         </li>
-        <li>
+        <li class="nav-item">
           <%= link_to "", user_path(current_user), class: "nav-link commonNavIcon profile-icon" %>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
